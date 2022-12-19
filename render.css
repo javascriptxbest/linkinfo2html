@@ -1,0 +1,109 @@
+:root {
+	--color-background: hsl(240, 4%, 14%);
+	--color-text: hsl(196, 26%, 83%);
+	--color-background-100: hsl(240, 4%, 8%);
+	--color-focus: hsl(83, 98%, 19%);
+	--color-link-visited: #94adf9;
+	--color-link: #99e83a;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	position: relative;
+	font-weight: normal;
+}
+
+html { height: 100%; }
+
+body {
+	height: 100%;
+	color: var(--color-text);
+	background: var(--color-background);
+	line-height: 1.6;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 16px;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+	color: inherit;
+	font-family: inherit;
+	margin: 0;
+	padding: 0.5rem 0.5rem 1rem;
+	font-weight: 500;
+	font-size: 1.2rem;
+	max-width: 50ch;
+}
+
+main {
+	padding: 0 0.5rem;
+}
+
+details[open] summary span:last-child {
+	text-overflow: initial;
+	overflow-wrap: anywhere;
+	max-width: max-content;
+}
+
+details:not([open]) summary span:last-child {
+	text-overflow: ellipsis;
+	overflow-wrap: normal;
+	white-space: nowrap;
+	overflow: hidden;
+	max-width: min-content;
+}
+
+details div {
+	padding: 0.2rem 0.3rem 0 1.3rem;
+}
+
+h2 {
+	font-size: 1rem;
+	padding-bottom: 0.3rem;
+}
+
+article {
+	max-width: 50ch;
+	padding-bottom: 1rem;
+}
+
+a {
+	color: var(--color-link);
+	text-decoration: none;
+	font-size: inherit;
+	width: 100%;
+	overflow-wrap: anywhere;
+	display: block;
+}
+
+a:visited {
+	color: var(--color-link-visited);
+}
+
+summary {
+	display: grid;
+	grid-template-columns: 1.1rem 1fr;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+summary span:first-child {
+	font-size: 0.8rem;
+}
+
+summary span:last-child {
+	font-size: 0.8rem;
+	color: rgba(255,255,255,0.6);
+	background: rgba(0,0,0,0.4);
+	padding: 0 0.3rem;
+	width: 100%;
+}
+
+details p {
+	font-size: 0.9rem;
+}
